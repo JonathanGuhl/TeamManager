@@ -1,0 +1,11 @@
+.card{
+    margin: 30px;
+}
+
+.team-header {
+    background-color: blue;
+}
+
+.card-body{
+    background-color: black;
+}
