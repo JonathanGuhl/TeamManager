@@ -198,51 +198,77 @@ createProfile();
 
 function createTeam() {
     const html = `
-      <html>
-        <head>
-          <title>Team Page</title>
-        </head>
-        <body>
-          <h1>My Team</h1>
-          <div>
+<!DOCTYPE html>    
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Team Page</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 jumbotron mb-3 bg-secondary text-white team-header">
+                <h1 class="text-center">My Team</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container-lg">
+        <div class="row justify-content-center">
             ${employees
-            .map((employee) => {
-                if (employee instanceof Manager) {
+                .map((employee) => {
+                    if (employee instanceof Manager) {
                     return `
-                    <div>
-                      <h2>${employee.getName()}</h2>
-                      <p>${employee.getRole()}</p>
-                      <p>ID: ${employee.getId()}</p>
-                      <p>Email: <a href="mailto:${employee.getEmail()}">${employee.getEmail()}</a></p>
-                      <p>Office Number: ${employee.getOfficeNumber()}</p>
+                <div class="card col-lg-3 m-2 shadow-lg bg-primary">
+                    <div class="card-body">
+                      <h2 class="card-title p-1 text-white">${employee.getName()}</h2>
+                        <h5 class="card-subtitle p-2 mb-2 text-white">${employee.getRole()}</h5>
+                            <ul class="list-group rounded-sm">
+                                <li class="list-group-item font-weight-bold">ID: ${employee.getId()}</li>
+                                <li class="list-group-item font-weight-bold">Email: <a href="mailto:${employee.getEmail()}" class="card-link">${employee.getEmail()}</a></li>
+                                <li class="list-group-item font-weight-bold">Office Number: ${employee.getOfficeNumber()}</li>
+                            </ul>
                     </div>
+                </div>
                   `;
                 } else if (employee instanceof Engineer) {
                     return `
-                    <div>
-                      <h2>${employee.getName()}</h2>
-                      <p>${employee.getRole()}</p>
-                      <p>ID: ${employee.getId()}</p>
-                      <p>Email: <a href="mailto:${employee.getEmail()}">${employee.getEmail()}</a></p>
-                      <p>GitHub: <a href="https://github.com/${employee.getGithub()}" target="_blank">${employee.getGithub()}</a></p>
+                <div class="card col-lg-3 m-2 shadow-lg bg-primary">
+                    <div class="card-body">
+                      <h2 class="card-title p-1 text-white">${employee.getName()}</h2>
+                        <h5 class="card-subtitle p-2 mb-2 text-white">${employee.getRole()}</h5>
+                            <ul class="list-group rounded-sm">
+                                <li class="list-group-item font-weight-bold">ID: ${employee.getId()}</li>
+                                <li class="list-group-item font-weight-bold">Email: <a href="mailto:${employee.getEmail()}" class="card-link">${employee.getEmail()}</a></li>
+                                <li class="list-group-item font-weight-bold">GitHub: <a href="https://github.com/${employee.getGithub()}" target="_blank">${employee.getGithub()}</a></li>
+                            </ul>
                     </div>
+                </div>
                   `;
                 } else if (employee instanceof Intern) {
                     return `
-                    <div>
-                      <h2>${employee.getName()}</h2>
-                      <p>${employee.getRole()}</p>
-                      <p>ID: ${employee.getId()}</p>
-                      <p>Email: <a href="mailto:${employee.getEmail()}">${employee.getEmail()}</a></p>
-                      <p>School: ${employee.getSchool()}</p>
+                <div class="card col-lg-3 m-2 shadow-lg bg-primary">
+                    <div class="card-body">
+                      <h2 class="card-title p-1 text-white">${employee.getName()}</h2>
+                        <h5 class="card-subtitle p-2 mb-2 text-white">${employee.getRole()}</h5>
+                            <ul class="list-group rounded-sm">
+                                <li class="list-group-item font-weight-bold">ID: ${employee.getId()}</li>
+                                <li class="list-group-item font-weight-bold">Email: <a href="mailto:${employee.getEmail()}" class="card-link">${employee.getEmail()}</a></li>
+                                <li class="list-group-item font-weight-bold">School: ${employee.getSchool()}</li>
+                            </ul>
                     </div>
+                </div>
                   `;
                 }
             })
             .join("")}
-          </div>
-        </body>
-      </html>
+        </div>
+    </div>
+</body>
+</html>
     `;
     const outputPath = path.join(__dirname, "generated", "team.html");
 
