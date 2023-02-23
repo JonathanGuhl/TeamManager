@@ -277,6 +277,6 @@ function createTeam() {
     }
 
     fs.writeFileSync(outputPath, html);
-    console.log("Your HTML file has been generated successfully within the output folder!");
+    console.log("Your HTML file has been generated successfully within the generated folder!");
 }
 
