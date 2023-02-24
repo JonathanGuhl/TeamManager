@@ -34,7 +34,7 @@ function createProfile() {
         ])
         .then(getCorrectQuestions);
 }
-
+// Checks role choice from createProfile() prompt, prompts new questions and instantiates new employee based off or role
 function getCorrectQuestions(answers) {
     if (answers.role === "Manager") {
         inquirer
@@ -195,7 +195,7 @@ function askToAddNewMember() {
 }
 
 createProfile();
-
+// Returns HTML sheet then generates a card for each instance of each employee role
 function createTeam() {
     const html = `
 <!DOCTYPE html>    
