@@ -10,7 +10,13 @@
 ## Usage Tutorial 
 
 - Before I give you step by step instructions, watch this video. If you need further help after the video, follow the step by step instructions under the video.
-https://user-images.githubusercontent.com/119094131/221095439-0f1e256e-783b-42c3-bda1-e30dc07e160e.mp4
+
+
+
+https://user-images.githubusercontent.com/119094131/221096175-48b54a90-952f-4c2c-b6bb-730cb185b2ee.mp4
+
+
+
 - First, you will need to clone the repository using `git clone git@github.com:JonathanGuhl/TeamManager.git` 
 - Second, open your terminal or use the terminal within whatever IDE you use and `cd` into whatever file you stored the cloned repository in.
 - Third, before you run the node commands you will need to type `npm install`. 
