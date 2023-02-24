@@ -23,4 +23,4 @@ https://user-images.githubusercontent.com/119094131/221096175-48b54a90-952f-4c2c
 - Fourth, for the developers you can run `npm run test` to verify that all the tests are running as planned. 
 - Fifth, in the command line input `node main.js` then proceed to answer the questions about adding members of your team. Feel free to add as many as you'd like. 
 - After you have succesfully answered all of the questions, your HTML file will be created in your cloned repository within the 'Generated' folder under 'team.html'. 
-
+- Open the file in your default browswer and watch the magic happen!
